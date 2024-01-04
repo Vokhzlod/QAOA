@@ -53,12 +53,12 @@ class OptResult:
 
     def get_best_angles(self):
         return self.angles[self.index_Exp_min]
-    
+
     def num_fval(self):
         return len(self.Exp)
 
     def num_shots(self):
-        return sum(self.shots)    
+        return sum(self.shots)
 
     def get_best_solution(self):
         best_cost = np.min(self.BestCost)
@@ -87,7 +87,7 @@ class QAOA:
         precision=None,
         shots=1024,
         cvar=1,
-        memorysize = -1
+        memorysize=-1
     ) -> None:
         """
         A QAO-Ansatz consist of these parts:
@@ -332,7 +332,7 @@ class QAOA:
             )
             self.Var_sampled_p1 = np.array(variances).reshape(
                 angles["beta"][2], angles["gamma"][2]
-            ) 
+            )
             self.MaxCost_sampled_p1 = -np.array(maxcosts).reshape(
                 angles["beta"][2], angles["gamma"][2]
             )
