@@ -150,7 +150,6 @@ class QAOA:
         self.optimization_results = {}
         self.memory_lists = []
 
-
     def exp_landscape(self):
         ### at depth p = 1
         return self.Exp_sampled_p1
